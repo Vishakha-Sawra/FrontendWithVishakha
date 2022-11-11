@@ -1,4 +1,4 @@
-baseURL = 'scintillating-starship-b33f41.netlify.app'
+baseURL = 'https://cute-semolina-626c1e.netlify.app/'
 languageCode = 'en-us'
 title = 'FrontendWithVishakha'
 enableRobotsTXT = true
