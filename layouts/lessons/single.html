@@ -43,10 +43,10 @@
 					{{ $author := .Site.GetPage (print "/contributors/"  (anchorize .Params.Author)) }}
 					{{ $authorImg := (print "/contributors/img/"  (anchorize .Params.Author) ".webp") }}
 					<a class="flex items-center no-underline" itemprop="author" name="{{ .Params.author }}" href="/contributors/{{ anchorize .Params.author }}/">
-						
+						<img class="w-10 h-10 rounded-full block" src="{{ $authorImg }}" alt="{{ $author.Title }} avatar">
 						<span class="flex flex-col ml-2">
 							<span class="no-underline">By {{ title .Params.author }}</span>
-							<span class="text-xs text-gray4">Posted on <time itemprop="dateModified">{{ .Lastmod.Format "Jan 2, 2006"}}</time>
+							<span class="text-xs text-gray4">Posted <time itemprop="dateModified">{{ .Lastmod.Format "Jan 2, 2006"}}</time>
 						</span>
 	
 					</a>
