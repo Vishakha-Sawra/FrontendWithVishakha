@@ -13,7 +13,7 @@
 			<meta itemprop="datePublished" content="{{ .PublishDate }}" />
 			<meta itemprop="dateModified" content="{{ .Lastmod }}" />
 			<meta itemprop="image" content="img/featured.png" />
-			<meta itemprop="publisher" content="frontendwithvishakha" />
+			<meta itemprop="publisher" content="fireship.io" />
 
 
 			<header>
@@ -30,7 +30,7 @@
 					<meta itemprop="thumbnailUrl" content="{{ $.Params.featured_image }}" />
 					<meta itemprop="description" content="{{ $.Page.Params.description }}" />
 					<meta itemprop="uploadDate" content="{{ $.Page.Params.publishdate }}" />
-					<meta itemprop="publisher" content="FrontendWithVishakha" />
+					<meta itemprop="publisher" content="Fireship" />
 				</div>
 				{{ end }}
 
@@ -42,11 +42,11 @@
 
 					{{ $author := .Site.GetPage (print "/contributors/"  (anchorize .Params.Author)) }}
 					{{ $authorImg := (print "/contributors/img/"  (anchorize .Params.Author) ".webp") }}
-					<a class="flex items-center no-underline" itemprop="author" name="{{ .Params.author }}" href="">
-						<!-- <img class="w-10 h-10 rounded-full block" src="{{ $authorImg }}" alt="{{ $author.Title }} avatar"> -->
+					<a class="flex items-center no-underline" itemprop="author" name="{{ .Params.author }}" href="/contributors/{{ anchorize .Params.author }}/">
+						
 						<span class="flex flex-col ml-2">
 							<span class="no-underline">By {{ title .Params.author }}</span>
-							<span class="text-xs text-gray4">Posted <time itemprop="dateModified">{{ .Lastmod.Format "Jan 2, 2006"}}</time>
+							<span class="text-xs text-gray4">Posted on <time itemprop="dateModified">{{ .Lastmod.Format "Jan 2, 2006"}}</time>
 						</span>
 	
 					</a>
@@ -85,6 +85,8 @@
 
 				
 			</section>
+
+			
 
 		</article>
 		<!-- TOC fixed sidebar -->
